@@ -1,0 +1,24 @@
+<div>
+    <div class="list_content" ng-repeat=" listItem in  listData">
+
+        <p class="tag" ng-if="listItem.column.name" ng-bind="listItem.column.name"></p>
+        <h4 class="title" ng-bind="listItem.title"></h4>
+        <div class="pos1" ng-if="listItem.display_style == '10002'">
+            <p ng-bind="listItem.abstract"></p>
+            <img ng-src="{{listItem.thumbs[0].small.url}}" alt="">
+        </div>
+
+        <div class="pos2" ng-if="listItem.display_style == '10001'">
+            <p ng-bind="listItem.abstract"></p>
+        </div>
+
+        <div class="pos3" ng-if="listItem.display_style == '10003'">
+            <ul>
+                <li><img src="images/tabicon/post_3.png" alt=""></li>
+                <li><img src="images/tabicon/post_4.png" alt=""></li>
+                <li><img src="images/tabicon/post_5.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+

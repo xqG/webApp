@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="appController">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+<nav isback="true"></nav>
+
+<div style="padding-top: 64px" ng-show="type=='home'" ui-view="home"></div>
+<div style="padding-top: 64px" ng-show="type=='author'"  ui-view="author"></div>
+<div style="padding-top: 64px" ng-show="type=='column'" ui-view="column"></div>
+<div style="padding-top: 64px" ng-show="type=='my'" ui-view="my"></div>
+
+<tabbar></tabbar>
+
+
+</body>
+<!--设置页面的字体大小-->
+<script>
+    var font = window.screen.width / 10 + 'px';
+    document.getElementsByTagName('html')[0].style.fontSize = font;
+</script>
+<!--
+1.做手机网页时，是如何进行适配？
+  1.1 必须得要设置视口。
+  1.2 选择rem为单位进行开发。 px在手机里面不是以像素为单位，以点坐标为单位。
+  1.3.默认情况，在页面当中， 是根据html字体的大小进行缩放。 1rem = 100px/10.0  选择一个缩放比。
+  1.4 在做手机网页时， 我们一般都会先设置html的字体。1rem = 10px
+
+  rem 它是以html页面字体大小做为参考。
+-->
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/index.js"></script>
+
+</html>

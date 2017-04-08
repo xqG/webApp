@@ -1,0 +1,30 @@
+.tabbar{
+  left:0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  .h(49);
+  box-sizing: border-box;
+  ul{
+    list-style: none;
+    display: flex;
+    li{
+      flex: 1;
+      float: left;
+      text-align: center;
+      img{
+        .w(20);
+        .h(20);
+      }
+      span{
+        .fs(12);
+      }
+    }
+    .active{
+      color: red;
+    }
+    z-index: 102;
+  }
+}
